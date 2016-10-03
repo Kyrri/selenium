@@ -261,7 +261,9 @@ webdriver.Capabilities.opera = function() {
  */
 webdriver.Capabilities.phantomjs = function() {
   return new webdriver.Capabilities().
-      set(webdriver.Capability.BROWSER_NAME, webdriver.Browser.PHANTOM_JS);
+      set(webdriver.Capability.BROWSER_NAME, webdriver.Browser.PHANTOM_JS)
+      .set("phantomjs.page.settings.userAgent", 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1636.0 Safari/537.36');
+        }
 };
 
 
